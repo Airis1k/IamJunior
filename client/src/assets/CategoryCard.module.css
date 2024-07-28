@@ -1,0 +1,29 @@
+.card {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 1rem;
+   border: 2px solid #e6e6e6;
+   border-radius: 1rem;
+   margin-bottom: 1rem;
+   text-decoration: none;
+   color: black;
+}
+
+.card:hover,
+.activeCard {
+   background-color: #f2eefd;
+   border-color: #beaaf5;
+   color: #8056eb;
+}
+
+.icon {
+   max-width: 48px;
+   max-height: 48px;
+}
+
+.text {
+   font-size: 1.2rem;
+   font-weight: 500;
+   margin: 0;
+}

@@ -1,10 +1,16 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import classes from "../assets/Navbar.module.scss";
 import Logo from "../assets/logoipsum.svg";
 
 const Navbar = () => {
+   const navigate = useNavigate();
+
+   const goToLoginPage = () => {
+      navigate("/login");
+   };
+
    return (
-      <div className={classes.containerWrapper}>
+      <header className={classes.containerWrapper}>
          <nav className={classes.container}>
             <div className={classes.contentWrap}>
                <Link to="/">
@@ -28,11 +34,11 @@ const Navbar = () => {
                   </li>
                </ul>
             </div>
-            <NavLink to="#" className={classes.signInLink}>
+            <button onClick={goToLoginPage} className={classes.signInLink}>
                Login / Sign Up
-            </NavLink>
+            </button>
          </nav>
-      </div>
+      </header>
    );
 };
 

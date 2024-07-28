@@ -1,0 +1,80 @@
+.page {
+   height: calc(100vh - 115px);
+   background-color: #f9f8fe;
+}
+
+.container {
+   max-width: 1280px;
+   margin-inline: auto;
+   padding: 6rem 4rem 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.formWrap {
+   width: 600px;
+   background-color: #fff;
+   border-radius: 0.5rem;
+   padding: 2rem;
+   box-shadow: #5614d040 5px 5px 15px;
+}
+
+.heading {
+   font-size: 1.5rem;
+   text-align: center;
+   margin: 0 0 2rem;
+}
+
+.formInput {
+   border-radius: 6px;
+   line-height: 1.5;
+   padding: 0.8rem 1rem;
+   transition: box-shadow 0.1s ease-in, border 0.1s ease-in,
+      background-color 0.1s ease-in;
+   border: 2px solid #dee1e2;
+   color: #0e0e10;
+   display: block;
+   width: 100%;
+}
+
+.formInput:hover {
+   border-color: #ccc;
+}
+
+.formInput:focus-visible {
+   outline-color: #8056eb;
+}
+
+.inputWrap {
+   margin-bottom: 1rem;
+}
+
+.formBtn {
+   padding: 0.75rem 1.25rem;
+   background-color: #8056eb;
+   color: #fff;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 0.9rem;
+}
+
+.formBtn:hover {
+   background-color: #5b24e7;
+}
+
+.navWrapper {
+   margin-top: 2rem;
+   text-align: center;
+}
+
+.navText {
+   color: #8056eb;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+.navText:hover {
+   text-decoration: underline;
+}

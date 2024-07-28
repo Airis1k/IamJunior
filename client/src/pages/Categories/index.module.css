@@ -1,0 +1,25 @@
+.container {
+   max-width: 1280px;
+   margin-inline: auto;
+   padding: 6rem 4rem 0;
+   display: flex;
+   column-gap: 2rem;
+}
+
+.contentWrap {
+   width: calc(70% - 32px);
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+   margin: 0 0 2rem;
+   font-size: 1.4rem;
+   text-transform: capitalize;
+}
+
+.cardsWrap {
+   display: flex;
+   gap: 2rem;
+   flex-wrap: wrap;
+}

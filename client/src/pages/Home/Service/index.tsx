@@ -1,15 +1,23 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 
-const Service = ({ data }) => {
-   console.log(data);
+export type Props = {
+   data: {
+      name: string;
+      icon: string;
+   };
+};
+
+const Service: FC<Props> = ({ data }) => {
+   const { name, icon } = data;
+   const link: string = name.toLowerCase();
 
    return (
-      <Link to="#" className={classes.link}>
+      <Link to={`/search/${link}`} className={classes.link}>
          <div className={classes.service}>
-            <img src={data.icon} className={classes.icon} />
-            <p className={classes.text}>{data.name}</p>
+            <img src={icon} className={classes.icon} />
+            <p className={classes.text}>{name}</p>
          </div>
       </Link>
    );

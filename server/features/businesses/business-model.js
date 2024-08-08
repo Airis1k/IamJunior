@@ -24,5 +24,5 @@ const businessSchema = new Schema({
    },
 });
 
-const Business = model("Business", businessSchema);
-export default Business;
+const BusinessModel = model("businesses", businessSchema);
+export default BusinessModel;

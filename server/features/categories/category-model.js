@@ -12,5 +12,5 @@ const serviceSchema = new Schema({
    },
 });
 
-const Service = model("Service", serviceSchema);
-export default Service;
+const ServiceModel = model("categories", serviceSchema);
+export default ServiceModel;

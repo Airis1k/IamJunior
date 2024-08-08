@@ -1,16 +1,19 @@
 import express from "express";
-import cors from "cors";
-import records from "./routes/record.js";
-import "dotenv/config";
+import {
+   envVariables,
+   configMiddlewares,
+   configRoutes,
+   connectToDb,
+} from "./config/index.js";
 
-const PORT = process.env.PORT || 5050;
-const app = express();
+const server = express();
+configMiddlewares(server);
+configRoutes(server);
 
-app.use(cors());
-app.use(express.json());
-app.use("/", records);
-
-// start the Express server
-app.listen(PORT, () => {
-   console.log(`Server running on http://localhost:${PORT}`);
+connectToDb(() => {
+   server.listen(envVariables.SERVER_PORT, () => {
+      console.log(
+         `Server running on http://localhost:${envVariables.SERVER_PORT}`
+      );
+   });
 });

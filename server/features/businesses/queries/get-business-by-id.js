@@ -1,5 +1,5 @@
-import BusinessModel from "../business-model.js";
 import mongoose from "mongoose";
+import BusinessModel from "../business-model.js";
 
 const getBusinessById = async (req, res) => {
    const { id } = req.params;

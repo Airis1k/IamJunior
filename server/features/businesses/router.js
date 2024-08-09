@@ -12,7 +12,7 @@ businessRouter.get(`${ROUTER_BASE}/:id`, getBusinessById);
 businessRouter.get(ROUTER_BASE, getBusinesses);
 businessRouter.get(
    `${ROUTER_BASE}/category/:category`,
-   getBusinessesByCategory
+   getBusinessesByCategory,
 );
 businessRouter.post(ROUTER_BASE, createBusiness);
 businessRouter.patch(`${ROUTER_BASE}/:id`, updateBusiness);

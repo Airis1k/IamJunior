@@ -1,0 +1,32 @@
+{
+   "env": {
+      "es2021": true,
+      "node": true
+   },
+   "extends": [
+      "airbnb-base"
+   ],
+   "parserOptions": {
+      "ecmaVersion": 15,
+      "sourceType": "module"
+   },
+   "rules": {
+      "quotes": [
+         "error",
+         "double"
+      ],
+      "import/extensions": [
+         "error",
+         {
+            "js": "ignorePackages"
+         }
+      ],
+      "indent": [
+         "error",
+         3
+      ],
+      "no-underscore-dangle": "off",
+      // TODO: fix the issue with import/no-cycle
+      "import/no-cycle": "off"
+   }
+}

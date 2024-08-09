@@ -1,7 +1,10 @@
 import { config } from "dotenv";
+
 config();
 
-const { ATLAS_URI, SERVER_PORT, TOKEN_SECRET, TOKEN_EXPIRATION } = process.env;
+const {
+   ATLAS_URI, SERVER_PORT, TOKEN_SECRET, TOKEN_EXPIRATION,
+} = process.env;
 
 const requiredEnvVariables = {
    ATLAS_URI,
@@ -20,7 +23,7 @@ Object.entries(requiredEnvVariables).forEach(([key, value]) => {
 if (missingEnvVariables.length > 0) {
    const missingVariableNames = missingEnvVariables.join("\t\n");
    throw new Error(
-      `Variables are not provided in .env file: \n${missingVariableNames}\n`
+      `Variables are not provided in .env file: \n${missingVariableNames}\n`,
    );
 }
 
@@ -31,4 +34,4 @@ const configEnvVariables = {
    TOKEN_EXPIRATION,
 };
 
-export { configEnvVariables };
+export default configEnvVariables;

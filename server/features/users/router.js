@@ -1,5 +1,5 @@
 import express from "express";
-import { getUsers } from "./queries/get-users.js";
+import getUsers from "./queries/get-users.js";
 import authMiddleware from "../../middlewares/auth-middleware.js";
 
 const ROUTER_BASE = "/users";

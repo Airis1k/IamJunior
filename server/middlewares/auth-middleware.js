@@ -12,9 +12,9 @@ const authMiddleware = (req, res, next) => {
    try {
       const payload = jwt.verify(token, envVariables.TOKEN_SECRET);
       req.currentUser = payload;
-      next();
+      return next();
    } catch (err) {
-      res.status(401).json({ message: "Not authenticated" });
+      return res.status(401).json({ message: "Not authenticated" });
    }
 };
 

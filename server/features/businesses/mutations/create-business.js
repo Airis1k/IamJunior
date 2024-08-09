@@ -1,7 +1,9 @@
 import BusinessModel from "../business-model.js";
 
 const createBusiness = async (req, res) => {
-   const { service, name, person, address, image } = req.body;
+   const {
+      service, name, person, address, image,
+   } = req.body;
 
    if (!service) {
       return res
@@ -32,7 +34,7 @@ const createBusiness = async (req, res) => {
    };
 
    const newBusiness = await BusinessModel.create(businessProps);
-   res.status(200).json(newBusiness);
+   return res.status(200).json(newBusiness);
 };
 
 export default createBusiness;

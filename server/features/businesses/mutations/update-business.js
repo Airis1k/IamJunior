@@ -1,9 +1,11 @@
-import BusinessModel from "../business-model.js";
 import mongoose from "mongoose";
+import BusinessModel from "../business-model.js";
 
 const updateBusiness = async (req, res) => {
    const { id } = req.params;
-   const { service, name, person, address, image } = req.body;
+   const {
+      service, name, person, address, image,
+   } = req.body;
 
    // TODO: Add validation
 
@@ -16,8 +18,10 @@ const updateBusiness = async (req, res) => {
    try {
       const updatedBusiness = await BusinessModel.findByIdAndUpdate(
          id,
-         { service, name, person, address, image },
-         { new: true }
+         {
+            service, name, person, address, image,
+         },
+         { new: true },
       );
 
       if (!updatedBusiness) {

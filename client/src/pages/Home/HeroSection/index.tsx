@@ -9,13 +9,9 @@ const HeroSection = () => {
       <div>
          <div className={classes.container}>
             <h1 className={classes.header}>
-               Find Home{" "}
-               <span className={classes.purpleText}>Service/Repair</span> Near
-               You
+               Find Home <span className={classes.purpleText}>Service/Repair</span> Near You
             </h1>
-            <p className={classes.paragraph}>
-               Explore Best Home Service & Repair near you
-            </p>
+            <p className={classes.paragraph}>Explore Best Home Service & Repair near you</p>
             <Form />
             <div className={classes.serviceWrap}>
                {SERVICES.map((element) => {

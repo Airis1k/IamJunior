@@ -16,11 +16,7 @@ const Login = () => {
       <div className={classes.page}>
          <div className={classes.container}>
             <div className={classes.formWrap}>
-               <form
-                  onSubmit={handleSubmit}
-                  className={classes.loginForm}
-                  noValidate
-               >
+               <form onSubmit={handleSubmit} className={classes.loginForm} noValidate>
                   <h2 className={classes.heading}>Register</h2>
                   <div className={classes.inputWrap}>
                      <input

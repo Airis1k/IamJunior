@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import classes from "../assets/Navbar.module.scss";
 import Logo from "../assets/logoipsum.svg";

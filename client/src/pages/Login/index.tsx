@@ -15,11 +15,7 @@ const Login = () => {
       <div className={classes.page}>
          <div className={classes.container}>
             <div className={classes.formWrap}>
-               <form
-                  onSubmit={handleSubmit}
-                  className={classes.loginForm}
-                  noValidate
-               >
+               <form onSubmit={handleSubmit} className={classes.loginForm} noValidate>
                   <h2 className={classes.heading}>Login</h2>
                   <div className={classes.inputWrap}>
                      <input
@@ -49,7 +45,7 @@ const Login = () => {
                </form>
                <div className={classes.navWrapper}>
                   <Link to="/register" className={classes.navText}>
-                     Don't have an account? Sign up
+                     Don&apos;t have an account? Sign up
                   </Link>
                </div>
             </div>
